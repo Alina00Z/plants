@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Plants</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <path d="M2.52667 20.9466L10.9212 3.66409C10.9212 3.66409 3.57596 7.00909 2.00199 10.9116C0.428017 14.8141 0.927102 18.4038 2.00201 20.9466" stroke="#499A18" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1.99646 20.9925C1.99646 20.9925 27.7102 -8.60087 19.3157 4.2216C10.9212 17.0441 20.1707 6.63145 15.4973 14.0678C10.824 21.5041 1.99646 20.9925 1.99646 20.9925Z" stroke="#499A18" stroke-linejoin="round"/>
+      </svg>
+      Plants
+    </div>
+        
+    <nav>
+        <ul class="list list-nav">
+            <li><a href="#"><span class="active-nav-section">Home</span></a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#prices">Price</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+  </header>
+  <!-- MAIN -->
+  <main>
+<!-- Welcome -->
+  <section id="welcome">
+    <div class="welcome-image">
+      <img src="./assets/leafs-1.png" alt="leafs">
+    </div>
+    <div class="welcome-content">
+      <h1 class="welcome-heading">We grow <span class="welcome-main-word">plants</span> and give you oxygen</h1>
+      <p class="welcome-par">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+      <a href="#service"><button class="btn-orange">LEARN MORE</button></a>
+    </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="about-content">
+        <h2 class="about-heading">We are <span class="about-main-word">professional experienced</span> gardeners</h2>
+        <p class="about-par">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+      </div>
+      <div class="about-plant">
+        <img src="./assets/houseplant-1.png" alt="houseplant">
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section id="service">
+      <!-- Меню с хэдерам и меню выбора типа сервиса -->
+      <div class="service-menu">
+        <h2 class="service-heading">Service and our projects</h2>
+        <ul class="btn-menu">
+          <li><button class="btn-orange">Gardens</button></li>
+          <li><button class="btn-orange">Lawn</button></li>
+          <li><button class="btn-orange">Planting</button></li>
+        </ul>
+      </div>
+     
+      <!-- Карточки проектов разных типов -->
+      <div class="services-cards">
+      <article class="service-card">
+        <a href="#"><img src="./assets/services/first-1.png" alt="Garden care"></a>
+        <header class="service-card-info">
+          <h3>Garden care</h3>
+          <p>Lorem Ipsum has been the industry</p>
+        </header>
+      </article>
+      <article class="service-card">
+        <a href="#"><img src="./assets/services/first-2.png" alt="Planting"></a>
+        <header class="service-card-info">
+          <h3>Planting</h3>
+          <p>Lorem Ipsum has been the industry</p>
+        </header>
+      </article>
+      <article class="service-card">
+        <a href="#"><img src="./assets/services/first-3.png" alt="Lawn care"></a>
+        <header class="service-card-info">
+          <h3>Lawn care</h3>
+          <p>Lorem Ipsum has been the industry</p>
+        </header>
+      </article>
+      <article class="service-card">
+        <a href="#"><img src="./assets/services/first-4.png" alt="Planting"></a>
+        <header class="service-card-info">
+          <h3>Planting</h3>
+          <p>Lorem Ipsum has been the industry</p>
+        </header>
+      </article>
+      <article class="service-card">
+        <a href="#"><img src="./assets/services/first-5.png" alt="Garden care"></a>
+        <header class="service-card-info">
+          <h3>Garden care</h3>
+          <p>Lorem Ipsum has been the industry</p>
+        </header>
+      </article>
+      <article class="service-card">
+        <a href="#"><img src="./assets/services/first-6.png" alt="Planting"></a>
+        <header class="service-card-info">
+          <h3>Planting</h3>
+          <p>Lorem Ipsum has been the industry</p>
+        </header>
+      </article>
+      </div>
+
+    </section>
+
+    <!-- Prices -->
+    <section id="prices">
+
+      <div class="prices-variant">
+          <h2 class="prices-heading">Prices</h2>
+          <!-- TO DO: доделать список с разными ценами-->
+          <ul>
+            <li class="dropdown-btn">
+              <span>Basics</span>
+              <div class="btn-accordion">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
+                <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+                <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <!--Выпадающий блок-->
+              <div class="price-drop-down">
+                <span>Basics</span>
+              </div>
+            </li>
+            <li class="dropdown-btn"><span>Standard</span>
+              <div class="btn-accordion">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
+                <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+                <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="price-drop-down">
+                <span>Standard</span>
+              </div>
+            </li>
+            <li class="dropdown-btn"><span>Pro care</span>
+              <div class="btn-accordion">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
+                <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+                <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="price-drop-down">
+                <span>Pro care</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      <article class="help">
+        <h3>Our best <span class="prices-main-word">gardeners</span> are ready to help you</h3>
+        <a href="#contacts"><button class="btn-orange">Contact us</button></a> <!--подумать над кнопкой(бордеры создаются вокруг текста)-->
+        <img src="./assets/leafs-2.png" alt="leafs">
+      </article>
+    </section>
+
+    <!--Contacts-->
+    <section id="contacts">
+      <h2>Contacts us</h2>
+
+      <div class="container-contacts">
+        <img src="./assets/contact_woman-1.png" alt="contact women">
+        <!--Кнопка-->
+        <div class="dropdown-btn dropdown-city_close">
+          <span>City</span>
+          <div class="btn-accordion">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
+            <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+            <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <!--После нажатия на кнопку повляется новый див-->
+        <div class="dropdown-city_active">
+          <span>City</span>
+          <div class="btn-accordion">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
+            <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+            <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--FOOTER-->
+  <footer id="footer">
+    <ul class="list footer-data">
+      <li>©</li>
+      <li>2023</li>
+      <li><a href="#">github</a></li>
+    </ul>
+    <div>Rolling Scopes School</div>
+    <ul class="list social-list">
+      <li><a href="#"><img src="./assets/footer_social-list/inst-1.png" alt="instagram link"></a></li>
+      <li><a href="#"><img src="./assets/footer_social-list/fb-1.png" alt="facebook link"></a></li>
+      <li><a href="#"><img src="./assets/footer_social-list/tw-1.png" alt="twitter link"></a></li>
+      <li><a href="#"><img src="./assets/footer_social-list/pinterest-1.png" alt="pinterest link"></a></li>
+    </ul>
+    
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
