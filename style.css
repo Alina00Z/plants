@@ -10,31 +10,28 @@ hr {
 ul {
   list-style: none;
 }
-
+a {
+  text-decoration: none;
+}
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #EDF2EC;
+  background-color:#edf2ec;
 }
 main:nth-child(even) {
   background: #fff;
 }
-html {scroll-behavior: smooth;}
-
-/* .container {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 1440px;
-} */
-
+html {
+  scroll-behavior: smooth;
+}
 .main-header {
   font-family: 'Inika', serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background-color: #EDF2EC;
+  background-color: #edf2ec;
 
   box-sizing: border-box;
   height: 134px;
@@ -46,14 +43,6 @@ html {scroll-behavior: smooth;}
   justify-content: space-between;
   align-items: center;
 }
-/* .main-header .container {
-  height: 134px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-} */
 .list {
   padding: 0px;
   margin: 0px;
@@ -64,17 +53,16 @@ html {scroll-behavior: smooth;}
   flex-wrap: nowrap;
 }
 .list li a:hover {
-  color: #E06733;
+  color:#e06733;
 }
 li a {
-  color: #010201;
-  text-decoration: none;
+  color:#010201;
 }
 .list-nav a {
   margin-left: 46px;
 }
 .active-nav-section {
-  color: #E06733;
+  color: #e06733;
   font-weight: 700;
 }
 main {
@@ -85,7 +73,7 @@ main {
   height: 532px;
   width: 1440px; 
   padding: 62px 109px;
-  background-color: #EDF2EC;
+  background-color:#edf2ec;
 
   display: flex;
   flex-direction: row;
@@ -117,7 +105,7 @@ main {
   line-height: normal;
 
   background-color: transparent;
-  color:#E06733;
+  color:#e06733;
 
   box-sizing: border-box;
   text-align: center;
@@ -130,15 +118,22 @@ main {
   line-height: 20px; /* 125% */
 
   border-radius: 10px;
-  border: 2px solid #E06733;
+  border: 2px solid #e06733;
 
   height: 44px;
   width: 158px;
 }
+.welcome-content .btn-orange a {
+  color: #000;
+  padding: 10px 25px;
+}
 /* Анимация наведения на кнопку*/
 .btn-orange:hover {
   cursor: pointer;
-  background-color: #E06733;
+  background-color: #e06733;
+  color: #fff;
+}
+.btn-orange:hover a {
   color: #fff;
 }
 .welcome-image {
@@ -154,7 +149,7 @@ main {
   align-items: flex-start;
 }
 .welcome-main-word {
-  color: #499A18;
+  color: #499a18;
 }
 
 #about {
@@ -173,7 +168,7 @@ main {
   width: 605px;
 }
 .about-heading {
-  color: #499A18;
+  color: #499a18;
   font-family: 'Inika', serif;
   font-size: 40px;
   font-style: normal;
@@ -184,7 +179,7 @@ main {
   margin-bottom: 40px;
 }
 .about-main-word {
-  color: #E06733;
+  color: #e06733;
 }
 .about-par {
   color: #636060;
@@ -200,10 +195,10 @@ main {
   width: 1440px;
   height: 1300px;
   padding: 40px 109px 121px 109px;
-  background-color: #EDF2EC;
+  background-color: #edf2ec;
 }
 .service-heading {
-  color: #499A18;
+  color: #499a18;
   font-family: 'Inika', serif;
   font-size: 40px;
   font-style: normal;
@@ -234,14 +229,14 @@ main {
   margin-right: 38px;
 
   border-radius: 5px;
-  border: 1px solid #E06733;
+  border: 1px solid #e06733;
   background-color: transparent;
-  color: #E06733;
+  color: #e06733;
 }
 .btn-menu .btn-orange:hover {
   cursor: pointer;
   color: #fff;
-  background-color: #E06733;
+  background-color: #e06733;
 }
 .services-cards {
   display: flex;
@@ -264,7 +259,7 @@ main {
   margin-bottom: 55px;
 
   border-radius: 0px 0px 20px 20px;
-  border: 1px solid #E3E1D5;
+  border: 1px solid #e3e1d5;
 
   display: flex;
   flex-direction: column;
@@ -276,7 +271,7 @@ main {
   margin-top: 10px;
 }
 .service-card-info h3 {
-  color: #E06733;
+  color: #e06733;
   font-family: 'Inter',serif;
   font-size: 20px;
   font-style: normal;
@@ -324,7 +319,7 @@ main {
   justify-content: space-evenly;
   align-items: center;
   border-radius: 20px;
-  border: 1px solid #E3E1D5;
+  border: 1px solid #e3e1d5;
 
   color: #000;
   font-family: 'Inter', serif;
@@ -369,7 +364,7 @@ main {
   height: 154px;
   margin-left: -40px;
   margin-top: 102px;
-  background-color: #D6E7D2;;
+  background-color: #d6e7d2;;
   border-radius: 20px;
 
   box-sizing: border-box;
@@ -381,6 +376,10 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+}
+.help a {
+  color: #e06733;
+  padding: 10px 32px;
 }
 .help h3 {
   color: #000;
@@ -394,7 +393,7 @@ main {
   width: 452px;
 }
 h3 .prices-main-word {
-  color: #499A18;
+  color: #499a18;
   font-family: Inter;
   font-size: 40px;
   font-style: normal;
@@ -406,7 +405,7 @@ h3 .prices-main-word {
   font-weight: 700;
 
   border-radius: 5px;
-  border: 1px solid #E06733;
+  border: 1px solid #e06733;
 
   width: 162px;
   height: 50.002px;
@@ -418,13 +417,13 @@ h3 .prices-main-word {
   height: 550px;
   padding: 53px 109px;
 
-  background-color: #EDF2EC;
+  background-color: #edf2ec;
 
   
 }
 #contacts h2 {
   text-align: center;
-  color: #499A18;
+  color: #499a18;
   font-family: 'Inika', serif;
   font-size: 40px;
   font-style: normal;
@@ -457,7 +456,7 @@ h3 .prices-main-word {
 }
 .accordion-toggle {
   padding: 12.75px 35px 12.75px 20px;
-  background: #D6E7D2;
+  background: #d6e7d2;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
   cursor: pointer;
@@ -467,11 +466,11 @@ h3 .prices-main-word {
 }
 .accordion-wrapper {
   max-height: 0px;
-  background: #DCE9D9;
+  background: #dce9d9;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 
-  color: #499A18;
+  color: #499a18;
   font-family: 'Inter', serif;
   font-size: 16px;
   font-style: normal;
@@ -486,7 +485,7 @@ h3 .prices-main-word {
 .accordion-wrapper hr {
   margin-top: -7px;
 
-  background: #D9D9D9;
+  background: #d9d9d9;
   border-width: 0px;
   height: 1px;
 }
@@ -505,7 +504,7 @@ h3 .prices-main-word {
   max-height: 100%;
 }
 .accordion:hover .dropdown-btn svg circle {
-  fill: #8BA07E;
+  fill: #8ba07e;
 }
 
 
@@ -521,7 +520,7 @@ h3 .prices-main-word {
   justify-content: space-between;
   align-items: center;
 
-  background: #FFF;
+  background: #fff;
 
   color: #000;
   font-family: 'Inter', serif;

@@ -40,7 +40,9 @@
     <div class="welcome-content">
       <h1 class="welcome-heading">We grow <span class="welcome-main-word">plants</span> and give you oxygen</h1>
       <p class="welcome-par">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-      <a href="#service"><button class="btn-orange">LEARN MORE</button></a>
+      <button class="btn-orange">
+        <a href="#service">LEARN MORE</a>
+      </button>
     </div>
     </section>
 
@@ -165,7 +167,7 @@
 
       <article class="help">
         <h3>Our best <span class="prices-main-word">gardeners</span> are ready to help you</h3>
-        <a href="#contacts"><button class="btn-orange">Contact us</button></a> <!--подумать над кнопкой(бордеры создаются вокруг текста)-->
+        <button class="btn-orange"><a href="#contacts">Contact us</a></button> 
         <img src="./assets/leafs-2.png" alt="leafs">
       </article>
     </section>
@@ -176,7 +178,7 @@
 
       <div class="container-contacts">
         <img src="./assets/contact_woman-1.png" alt="contact women">
-        <!--Блок с кнопкой accardion -->
+        <!--Блок с кнопкой accordion -->
         <div class="accordion">
           <label for="toggle" class="accordion-toggle">
             <span>City</span>
@@ -186,16 +188,17 @@
               <path d="M8 9L10 7" stroke="white" stroke-width="0.5" stroke-linecap="round"/>
             </svg>
           </label>
-          <input type="checkbox" class="accordion-input" id="toggle"></input>
+          <input type="checkbox" class="accordion-input" id="toggle">
             <!--После нажатия на кнопку повляется список городов-->
-            <ul class="accordion-wrapper">
-              <li><span>Canandaigua, NY</span><hr></li>
-              <li><span>New York City</span><hr></li>
-              <li><span>Yonkers, NY</span><hr></li>
-              <li><span>Sherrill, NY</span><hr></li>
-            </ul>
+          <ul class="accordion-wrapper">
+            <li><span>Canandaigua, NY</span><hr></li>
+            <li><span>New York City</span><hr></li>
+            <li><span>Yonkers, NY</span><hr></li>
+            <li><span>Sherrill, NY</span><hr></li>
+          </ul>
       </div>
-    </section>
+    </div>  
+  </section>
   </main>
 
   <!--FOOTER-->
