@@ -441,85 +441,71 @@ h3 .prices-main-word {
   justify-content: space-between;
 }
 
-.accordeon {
+.accordion {
   margin-top: 37px;
-}
-.dropdown-city_close {
-  width: 450px;
-  height: 50px;
-
-  background: #D6E7D2;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 0.5s ease-in;
 
   color: #717171;
   font-family: 'Inter',serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  letter-spacing: 2px;
-  padding-left: 20px;
+  letter-spacing: 1px;
 }
-.dropdown-city_close .btn-accordion {
-  padding-right: 35px;
-}
-.accordion:hover .dropdown-city_close {
-  box-shadow: none;
-}
-.btn-accordion svg{
+.accordion-toggle svg {
+  margin-left: 330.7px;
   transform: rotate(0deg);
 }
-.accordion:hover .dropdown-btn svg{
-  transform: rotate(180deg);
-}
-.accordion:hover .dropdown-btn svg circle {
-  fill: #8BA07E;
-}
-.accordion:hover .dropdown-city_close{
-  border: 1px solid #D6E7D2;
-  background: #C1E698;
-}
-.dropdown-city_open ul {
-  box-sizing: border-box;
-  width: 450px;
-  height: 234px;
-  padding: 15px 50px 0px 20px;
+.accordion-toggle {
+  padding: 12.75px 35px 12.75px 20px;
+  background: #D6E7D2;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
+  cursor: pointer;
+}
+.accordion-input {
+  display: none;
+}
+.accordion-wrapper {
+  max-height: 0px;
   background: #DCE9D9;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
 
   color: #499A18;
-  font-family: 'Inter',serif;
+  font-family: 'Inter', serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 40px; /* 250% */
   letter-spacing: 0.8px;
+
+  box-sizing: border-box;
+  padding: 15px 50px 0px 20px;
+  height: 234px;
 }
-.dropdown-city_open li{
-  margin: 10px 0px -5px 6px;
-}
-.dropdown-city_open hr {
+.accordion-wrapper hr {
+  margin-top: -7px;
+
   background: #D9D9D9;
   border-width: 0px;
   height: 1px;
 }
-.dropdown-city_open span:hover {
-  color: #717171;
+.accordion-wrapper li {
+  margin-top: 12px;
+
   cursor: pointer;
 }
-.dropdown-city_open span:hover .dropdown-city_open hr {
+.accordion-wrapper li:hover {
+  color:#717171;
+}
+.accordion-wrapper li:hover hr {
   background-color: #717171;
 }
-.dropdown_open {
-  max-height: 0px;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out
-}
-.dropdown-btn:hover ~ .dropdown_open {
+.accordion-input:checked ~ .accordion-wrapper {
   max-height: 100%;
 }
-.dropdown_open:hover{
-  max-height: 100%;
+.accordion:hover .dropdown-btn svg circle {
+  fill: #8BA07E;
 }
 
 
