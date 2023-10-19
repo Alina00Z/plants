@@ -177,28 +177,26 @@
       <div class="container-contacts">
         <img src="./assets/contact_woman-1.png" alt="contact women">
         <!--Кнопка-->
-        <div class="dropdown-btn dropdown-city_close">
-          <span>City</span>
-          <div class="btn-accordion">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
-            <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
-            <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
-            </svg>
+        <div class="accordion">
+          <div class="dropdown-btn dropdown-city_close">
+            <span>City</span>
+            <div class="btn-accordion">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8" r="8" fill="#AEA1A1"/>
+                <path d="M8.00003 8.99997L6.00002 7.00008" stroke="white" stroke-width="0.5" stroke-linecap="round"/>
+                <path d="M8 9L10 7" stroke="white" stroke-width="0.5" stroke-linecap="round"/>
+              </svg>
+            </div>
           </div>
-        </div>
-        <!--После нажатия на кнопку повляется новый див-->
-        <div class="dropdown-city_active">
-          <span>City</span>
-          <div class="btn-accordion">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
-            <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
-            <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
-            </svg>
+            <!--После наведения на кнопку повляется новый список городов-->
+          <div class="dropdown_open dropdown-city_open">
+            <ul>
+              <li><span>Canandaigua, NY</span></li><hr>
+              <li><span>New York City</span></li><hr>
+              <li><span>Yonkers, NY</span></li><hr>
+              <li><span>Sherrill, NY</span></li><hr>
+            </ul>
           </div>
-
-        </div>
       </div>
     </section>
   </main>
