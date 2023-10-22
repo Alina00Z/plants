@@ -61,13 +61,15 @@ body {
 li a {
   color:#010201;
 }
-.list-nav a {
+.list-nav li {
   margin-left: 46px;
 }
 .active-nav-section {
   color: #e06733;
   font-weight: 700;
 }
+
+
 #welcome {
   background-color:#edf2ec;
 }
@@ -144,19 +146,20 @@ li a {
 .btn-orange:hover a {
   color: #fff;
 }
-.welcome-image {
-  /* display: flex;
-  align-items: center; */
-
-}
 .welcome-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* width: 448.795px;
+  height: 407.358px; */
+}
+.welcome-image {
   width: 448.795px;
   height: 407.358px;
 }
 @media (max-width: 900px) {
-  .welcome-image img {
+  .welcome-image {
     width: 299px;
-    height: 271.5px;
   }
 }
 .welcome-main-word {
@@ -382,12 +385,7 @@ li a {
   background: #edf2ec;
   padding: 0px 40px;
 }
-.btn-accordion {
-  height: 16px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 /* Выпадающий блок - инфо цен */
 .price-drop-down {
   display: none;
@@ -456,7 +454,6 @@ h3 .prices-main-word {
 
 #contacts {
   background-color: #edf2ec;
-  position: relative;
 }
 .contacts-wrapper {
   padding-top: 60px;
@@ -469,14 +466,16 @@ h3 .prices-main-word {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+
+  margin-bottom: 37px;
 }
 .contacts-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .contacts-img {
-  margin-top: -59px;
+  margin-top: -100px;
 }
 @media (max-width: 930px) { 
   .contacts-img {
@@ -491,38 +490,42 @@ h3 .prices-main-word {
   justify-content: space-between;
 }
 
+.accordion-container {
+  position: relative;
+  height: 284px;
+  width: 450px;
+  margin-bottom: 16px;
+
+}
 .accordion {
-  bottom: 0px;
-  left: 0px;
-  margin-top: 37px;
+  width: 100%;
+  height: 50px;
+  padding: 0 35px 0px 20px;
+
+  background: #D6E7D2;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
 
   color: #717171;
-  font-family: 'Inter',serif;
+  font-family: 'Inter', serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
+  line-height: 40px; /* 200% */
   letter-spacing: 1px;
-}
-.accordion-toggle svg {
-  margin-left: 330.7px;
-  transform: rotate(0deg);
-}
-.accordion-toggle {
-  padding: 12.75px 35px 12.75px 20px;
-  background: #d6e7d2;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
   cursor: pointer;
-}
-.accordion-input {
-  display: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .accordion-wrapper {
-  position: absolute;
-  max-height: 0px;
-  background: #dce9d9;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
 
   color: #499a18;
   font-family: 'Inter', serif;
@@ -532,10 +535,26 @@ h3 .prices-main-word {
   line-height: 40px; /* 250% */
   letter-spacing: 0.8px;
 
-  padding: 15px 50px 0px 20px;
+  padding: 0px 50px 0px 20px;
   height: 234px;
-  width: 450px;
+  width: 100%;
+  background: #DCE9D9;
 }
+.active-accordion, .accordion:hover {
+  border: 1px solid #D6E7D2;
+  background: #C1E698;
+  box-shadow: none;
+}
+.active-accordion svg, .accordion:hover svg{
+  transform: rotate(180deg);
+}
+.active-accordion svg circle, .accordion:hover svg circle{
+  fill: #8BA07E;
+}
+.active-wrapper {
+  max-height: 100%;
+}
+
 .accordion-wrapper hr {
   margin-top: -7px;
 
@@ -545,8 +564,10 @@ h3 .prices-main-word {
 }
 .accordion-wrapper li {
   margin-top: 12px;
-
   cursor: pointer;
+}
+.accordion-wrapper li:first-child{
+  margin-top: 27px;
 }
 .accordion-wrapper li:hover {
   color:#717171;
@@ -554,13 +575,6 @@ h3 .prices-main-word {
 .accordion-wrapper li:hover hr {
   background-color: #717171;
 }
-.accordion-input:checked ~ .accordion-wrapper {
-  max-height: 100%;
-}
-.accordion:hover .dropdown-btn svg circle {
-  fill: #8ba07e;
-}
-
 
 #footer {
   color: #000;
@@ -604,10 +618,9 @@ h3 .prices-main-word {
   }
 
   .welcome-wrapper {
+    flex-direction: row-reverse;
     height: 420px;
     padding: 40px 0px 70px 0px;
-
-    display: block;
   }
   .welcome-heading {
     font-size: 35px;
@@ -616,11 +629,9 @@ h3 .prices-main-word {
     font-size: 16px;
     line-height: 25px;
   }
-  .welcome-image img {
+  .welcome-image {
     width: 280px;
     height: 254.148px;
-    position: absolute;
-    right: 0px;
   }
   .welcome-content {
     max-width: 341px;
@@ -634,10 +645,8 @@ h3 .prices-main-word {
     align-items: center;
     padding: 40px 0px 95px 0px;
   }
-  .about-content {
-    text-align: center;
-  }
-  .about-content h2 {
+  
+  .about-heading {
     margin: 0 auto;
   }
   .about-par {
@@ -648,6 +657,7 @@ h3 .prices-main-word {
   }
   .about-heading {
     font-size: 35px;
+    text-align: center;
   }
 
   .service-wrapper {
@@ -690,24 +700,23 @@ h3 .prices-main-word {
   .help {
     margin-top: 0px;
   }
-.container-contacts {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
+  .container-contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
   .contacts-wrapper {
     padding-top: 40px;
+    height: 739px;
   }
   .contacts-heading {
     margin-bottom: 100px;
   }
+  .accordion-container {
+  }
   .contacts-img {
     width: 200px;
     height: 248.5px;
-  }
-  .accordion {
-    margin-top: 12.75px;
-    margin-bottom: 250px;
   }
 
   .footer-wrapper {
@@ -719,8 +728,183 @@ h3 .prices-main-word {
 }
 
 /* Media for 380px */
-@media (max-width: 380px) {
+.header-burger {
+  height: 26px;
+  display: none;
+}
+@media (max-width: 620px) {
+  .header-burger {
+    display: block;
+  }
+  .header-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 0%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #edf2ec;
+
+    z-index: 10;
+  }
+  .welcome-image {  
+    height: 100%;
+    width: 200px;
+  }
+  .welcome-content {
+    max-width: 100%;
+  }
+  .btn-menu {
+    flex-wrap: wrap;
+    padding-bottom: 31px;
+  }
+  .btn-menu li {
+    margin-bottom: 9px;
+  }
+  .service-card {
+    width: calc(280px - 10vw);
+  }
+  
+}
+@media (max-width: 540px) {
+  .prices-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .help {
+    align-items: center;
+  }
+  .help h3 {
+    text-align: center;
+    padding-left: 0px;
+  }
+  .help img {
+    display: none;
+  }
+  .accordion-container {
+    width: 300px;
+  }
+}
+@media (max-width: 499px) {
+  .service-card {
+    width: 280px;
+  }
+  .services-cards {
+    justify-content: center;
+  }
 
 }
 
+@media(max-width: 380px) {
+  .header-wrapper {
+    height: 96px;
+  }
+  .welcome-wrapper {
+    height: 300px;
+    padding: 24px 0px;
+  }
+  .welcome-image {
+    display: none;
+  }
+  .welcome-heading {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .welcome-content .btn-orange {
+    font-size: 10px;
 
+    width: 100px;
+    height: 34.137px;
+  }
+  .welcome-content .btn-orange a{
+    padding: 0;
+  }
+
+  .about-wrapper {
+    padding: 30px 0 31px 0px;
+  }
+  .about-heading {
+    font-size: 25px;
+    margin-bottom: 21.5px;
+  }
+  .about-par {
+    font-size: 15px;
+    line-height: 25px;
+    padding: 0px;
+    margin-bottom: 5px;
+  }
+  .about-plant img{
+    width: 150px;
+  }
+
+  .service-heading {
+    font-size: 25px;
+  }
+  .service-wrapper .btn-orange {
+    font-size: 15px;
+  }
+  .service-wrapper {
+    padding: 30px 0px 27px;
+  }
+  .service-heading {
+    max-width: 187px;
+  }
+  .service-card {
+    margin-bottom: 34px;
+  }
+  .service-card:last-child {
+    margin-bottom: 0px;
+  }
+  .btn-menu {
+    padding: 35px 0px 40px;
+  }
+  
+  .prices-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0px 40px;
+  }
+  .prices-variant {
+    margin-bottom: 19px;
+  }
+  .prices-variant ul {
+    height: 235px;
+    width: 224px;
+    font-size: 15px;
+  }
+  .prices-variant .dropdown-btn {
+    width: 180px;
+  }
+  .help {
+    max-width: 230px;
+  }
+  .help h3 {
+    margin-bottom: 14px;
+    font-size: 20px;
+  }
+  .help span {
+    font-size: 20px;
+  }
+  .prices-heading {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+
+  .contacts-wrapper {
+    padding-top: 25px;
+    height: auto;
+  }
+  .contacts-heading {
+    font-size: 25px;
+    margin-bottom: 80px;
+  }
+  .accordion-container {
+    margin-bottom: 0px;
+  }
+  .contacts-img {
+    width: 100px;
+    height: 124.246px;
+    margin-top: 102px;
+  }
+}
