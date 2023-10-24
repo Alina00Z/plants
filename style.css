@@ -2,9 +2,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-/* *, *::before, *::after {
-  box-sizing: inherit;
-} */
 body,
 h1,h2,h3,
 p,
@@ -16,10 +13,12 @@ hr {
 }
 ul {
   list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 a {
   text-decoration: none;
-  color:#000;
+  color:#010201;
 }
 .wrapper {
   box-sizing: content-box;
@@ -47,10 +46,6 @@ body {
   height: 134px;
 }
 .list {
-  padding: 0px;
-  margin: 0px;
-
-  list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -58,10 +53,10 @@ body {
 .list li a:hover {
   color:#e06733;
 }
-li a {
+.list-nav li a {
   color:#010201;
 }
-.list-nav li {
+.list-nav li:not(:first-child) {
   margin-left: 46px;
 }
 .active-nav-section {
@@ -109,6 +104,29 @@ li a {
   font-weight: 400;
   line-height: 35px; /* 175% */
 }
+.link-btn {
+  display: block;
+  width: 162px;
+  height: 46px; 
+  font-family: 'Inter',serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+
+  border-radius: 10px;
+  border: 2px solid #E06733;
+  text-align: center;
+}
+.welcome-content .link-btn {
+  color: #000;
+  line-height: 20px;
+  padding: 12px 0px;
+}
+.link-btn:hover {
+  color: #fff;
+  background-color: #E06733;
+}
 .btn-orange {
   font-family: 'Inika',serif;
   font-size: 20px;
@@ -120,38 +138,16 @@ li a {
 
   text-align: center;
 }
-.welcome-content .btn-orange {
-  font-family: 'Inter', serif;
-  color: #000;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px; /* 125% */
-
-  border-radius: 10px;
-  border: 2px solid #e06733;
-
-  height: 44px;
-  width: 158px;
-}
-.welcome-content .btn-orange a {
-  color: #000;
-  padding: 10px 25px;
-}
 /* Анимация наведения на кнопку*/
 .btn-orange:hover {
   cursor: pointer;
   background-color: #e06733;
   color: #fff;
 }
-.btn-orange:hover a {
-  color: #fff;
-}
 .welcome-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* width: 448.795px;
-  height: 407.358px; */
 }
 .welcome-image {
   width: 448.795px;
@@ -169,7 +165,6 @@ li a {
 
 .about-wrapper {
   padding: 93px 0px 94px 0px;
-  /* height: 666px; */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -351,7 +346,8 @@ li a {
   justify-content: space-between;
 
 }
-.prices-variant ul {
+.prices-variant {
+  display: block;
   width: 332px;
   height: 282px;
   display: flex;
@@ -367,42 +363,136 @@ li a {
   font-style: normal;
   font-weight: 700;
   line-height: 20px; /* 100% */
-  
 }
-.dropdown-btn {
-  display: flex;
-  flex-direction:row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-
-  cursor: pointer;
-}
-.prices-variant .dropdown-btn {
+.accordion-container {
+  position: relative;
   width: 250px;
   height: 50px;
-  border-radius: 20px;
-  background: #edf2ec;
-  padding: 0px 40px;
 }
+.accordion {
+  width: 100%;
+  height: 50px;
+  padding: 0 35px 0px 20px;
 
-/* Выпадающий блок - инфо цен */
-.price-drop-down {
-  display: none;
-  position: absolute;
+  color: #717171;
+  font-family: 'Inter', serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 200% */
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.prices-variant ul > li:hover .price-drop-down {
-  display: inherit;
+.accordion-wrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 0px;
+  transition: height 0.5s ease;
+
+  padding: 0px 50px 0px 20px;
+  width: 100%;
+}
+/* Price accordion-wrapper */
+.accordion-wrapper-btn {
+  font-family: 'Inter',serif;
+
+  padding: 16px 40px 0px 40px;
 
   width: 250px;
-  height: 154px;
-  margin-left: -40px;
-  margin-top: 102px;
-  background-color: #d6e7d2;;
+  height: 50px;
+  text-align: left;
+  overflow: hidden;
+  border: none;
   border-radius: 20px;
-
-  padding: 16px 40px 12px 40px;
+  background-color: #EDF2EC;
+  cursor: pointer;
+  transition: height 0.5s ease, background-color 0.3s ease;
 }
+.accordion-wrapper-btn:hover, .accordion-wrapper-btn-active{
+  background-color: #D6E7D2;
+}
+.accordion-wrapper-btn-active svg, .accordion-wrapper-btn:hover svg {
+  transform: rotate(180deg);
+}
+.accordion-wrapper-btn-active svg circle, .accordion-wrapper-btn:hover svg circle{
+  fill: #AEA1A1;
+}
+.accordion-wrapper-btn-active {
+  height: 154px;
+}
+.accordion-wrapper-btn-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  color: #000;
+  font-family: 'Inter', serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+
+  margin-bottom: 12px;
+}
+.accordion-wrapper-line {
+  width: 0px;
+  height: 0.5px;
+  border-width: 0px;
+  background-color: #AEA1A1;
+  transition: width 0.6s ease;
+  margin-bottom: 6px;
+}
+.accordion-wrapper-line-active {
+  width: 100%;
+}
+.accordion-wrapper-btn p {
+  color: #717171;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10px; /* 100% */
+
+  margin-bottom: 6px;
+}
+.price-count {
+  color: #E06733;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17px;
+
+  margin-bottom: 12px;
+}
+.price-count .digit {
+  font-size: 16px;
+}
+.price-count .hours {
+  color: #000;
+  font-weight: 400;
+}
+.btn-white {
+  display: block;
+  width: 86px;
+  height: 25px;
+  padding: 3px 0px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+
+  color: #717171;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+}
+
 
 .help {
   display: flex;
@@ -431,22 +521,25 @@ li a {
 }
 h3 .prices-main-word {
   color: #499a18;
-  font-family: Inter;
+  font-family: 'Inter',serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
   line-height: 50px;
-
 }
-.help .btn-orange {
+.help .link-btn{
+  font-family: 'Inika',serif;
   font-weight: 700;
+  line-height: normal;
+  font-size: 20px;
 
   border-radius: 5px;
   border: 1px solid #e06733;
 
-  width: 162px;
-  height: 50.002px;
-  margin-bottom: 27px;
+  width: 164px;
+  height: 50px;
+  padding: 11px 0px;
+  margin-bottom: 39px;
 }
 .help img {
   width: 152px;
@@ -490,42 +583,23 @@ h3 .prices-main-word {
   justify-content: space-between;
 }
 
-.accordion-container {
-  position: relative;
+
+.accordion-container-city {
   height: 284px;
   width: 450px;
   margin-bottom: 16px;
-
 }
-.accordion {
-  width: 100%;
-  height: 50px;
-  padding: 0 35px 0px 20px;
 
+.accordion-city {
   background: #D6E7D2;
+
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border: none;
-
-  color: #717171;
-  font-family: 'Inter', serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px; /* 200% */
-  letter-spacing: 1px;
-  cursor: pointer;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  transition: background-color 0.5s ease, box-shadow 0.4s ease;
 }
-.accordion-wrapper {
-  overflow: hidden;
-  position: absolute;
-  top: 48px;
-  left: 0;
-  max-height: 0;
-  transition: max-height 0.5s ease-out;
+
+.accordion-wrapper-city {
+  background: #DCE9D9;
 
   color: #499a18;
   font-family: 'Inter', serif;
@@ -535,14 +609,12 @@ h3 .prices-main-word {
   line-height: 40px; /* 250% */
   letter-spacing: 0.8px;
 
-  padding: 0px 50px 0px 20px;
-  height: 234px;
-  width: 100%;
-  background: #DCE9D9;
+  height: 0px;
+  top: 48px;
 }
-.active-accordion, .accordion:hover {
+.active-accordion.accordion-city, .accordion.accordion-city:hover {
   border: 1px solid #D6E7D2;
-  background: #C1E698;
+  background-color: #C1E698;
   box-shadow: none;
 }
 .active-accordion svg, .accordion:hover svg{
@@ -551,11 +623,33 @@ h3 .prices-main-word {
 .active-accordion svg circle, .accordion:hover svg circle{
   fill: #8BA07E;
 }
-.active-wrapper {
-  max-height: 100%;
+.active-wrapper.accordion-wrapper-city {
+  height: 234px;
+}
+.wrapper-par {
+  height: 30px;
+  margin: 2px 0px 6px 0px;
+
+  color: #717171;
+  font-family: 'Inter',serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 10px; /* 100% */
+}
+.wrapper-price_count {
+  margin-bottom: 12px;
+
+  color: #E06733;
+  font-family: 'Inter',serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 166.667% */
 }
 
-.accordion-wrapper hr {
+
+.wrapper-line-city  {
   margin-top: -7px;
 
   background: #d9d9d9;
@@ -572,7 +666,7 @@ h3 .prices-main-word {
 .accordion-wrapper li:hover {
   color:#717171;
 }
-.accordion-wrapper li:hover hr {
+.accordion-wrapper li:hover .wrapper-line-city {
   background-color: #717171;
 }
 
@@ -810,14 +904,11 @@ h3 .prices-main-word {
     font-size: 25px;
     line-height: 35px;
   }
-  .welcome-content .btn-orange {
+  .welcome-content .link-btn {
     font-size: 10px;
-
     width: 100px;
-    height: 34.137px;
-  }
-  .welcome-content .btn-orange a{
-    padding: 0;
+    height: 34px;
+    padding: 6px 0px;
   }
 
   .about-wrapper {
@@ -860,22 +951,45 @@ h3 .prices-main-word {
   }
   
   .prices-wrapper {
+    height: 512px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 0px 40px;
+    padding: 25px 0px 0px 0px;
   }
   .prices-variant {
-    margin-bottom: 19px;
-  }
-  .prices-variant ul {
     height: 235px;
     width: 224px;
-    font-size: 15px;
+    margin-bottom: 19px;
+    
   }
-  .prices-variant .dropdown-btn {
-    width: 180px;
-  }
+ .accordion-wrapper-btn {
+  width: 180px;
+  padding: 15px 40px 0px 30px;
+ }
+ .accordion-wrapper-btn-content {
+  font-size: 15px;
+ }
+ .accordion-wrapper-btn p {
+  font-size: 8px;
+ }
+ 
+.price-count {
+    margin-bottom: 3px;
+    font-size: 9px;
+}  
+.price-count .digit {
+  font-size: 13px;
+}
+.price-count .hours {
+  font-size: 9px;
+}
+.accordion-wrapper-btn .btn-white {
+  font-size: 10px;
+  width: 80px;
+  height: 24px;
+}
+
   .help {
     max-width: 230px;
   }
@@ -885,6 +999,12 @@ h3 .prices-main-word {
   }
   .help span {
     font-size: 20px;
+  }
+  .help .link-btn {
+    font-size: 15px;
+    width: 123px;
+    height: 37px;
+    padding: 7px 0px;
   }
   .prices-heading {
     font-size: 25px;

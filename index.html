@@ -46,7 +46,7 @@
 
   <!-- MAIN -->
   <main>
-<!-- Welcome -->
+  <!-- Welcome -->
   <section id="welcome">
     <div class="wrapper">
 
@@ -57,9 +57,7 @@
         <div class="welcome-content">
           <h1 class="welcome-heading">We grow <span class="welcome-main-word">plants</span> and give you oxygen</h1>
           <p class="welcome-par">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          <button class="btn-orange">
-            <a href="#service">LEARN MORE</a>
-          </button>
+          <a class="link-btn" href="#service">LEARN MORE</a>
         </div>
       </div>
 
@@ -154,53 +152,55 @@
         <div class="prices-wrapper">
           <h2 class="prices-heading">Prices</h2>
           <div class="prices-content">
-            <div class="prices-variant">
               <!-- TO DO: доделать список с разными ценами-->
-              <ul>
-                <li class="dropdown-btn">
+            <ul class="prices-variant">
+              <li class="accordion-wrapper-btn">
+                <div class="accordion-wrapper-btn-content">
+                  <span>Standard</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
+                    <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+                    <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <hr class="accordion-wrapper-line">
+                <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                <div class="price-count">$<span class="digit">25</span> / <span class="hours">per hour</span></div>
+                <a href="#" class="btn-white">Order</a>
+              </li>
+              <li class="accordion-wrapper-btn">
+                <div class="accordion-wrapper-btn-content">
                   <span>Basics</span>
-                  <div class="btn-accordion">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
                     <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
                     <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                  <!--Выпадающий блок-->
-                  <div class="price-drop-down">
-                    <span>Basics</span>
-                  </div>
-                </li>
-                <li class="dropdown-btn"><span>Standard</span>
-                  <div class="btn-accordion">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  </svg>
+                </div>
+                <hr class="accordion-wrapper-line">
+                <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                <div class="price-count">$<span class="digit">15</span> / per hour</div>
+                <a href="#" class="btn-white">Order</a>
+              </li>
+              <li class="accordion-wrapper-btn">
+                <div class="accordion-wrapper-btn-content">
+                  <span>Pro care</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
                     <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
                     <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                  <div class="price-drop-down">
-                    <span>Standard</span>
-                  </div>
-                </li>
-                <li class="dropdown-btn"><span>Pro care</span>
-                  <div class="btn-accordion">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <circle cx="8" cy="8.00635" r="8" fill="#D9D9D9"/>
-                    <path d="M8.00003 9.00656L6.00003 7.00667" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
-                    <path d="M8 9.00635L10 7.00635" stroke="#717171" stroke-width="0.5" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-                  <div class="price-drop-down">
-                    <span>Pro care</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                  </svg>
+                </div>
+                <hr class="accordion-wrapper-line">
+                <p>Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                <div class="price-count">$<span class="digit">35</span> / per hour</div>
+                <a href="#" class="btn-white">Order</a>
+              </li>
+            </ul>
 
             <article class="help">
               <h3>Our best <span class="prices-main-word">gardeners</span> are ready to help you</h3>
-              <button class="btn-orange"><a href="#contacts">Contact us</a></button> 
+              <a class="link-btn" href="#contacts">Contact us</a>
               <img src="./assets/leafs-2.png" alt="leafs">
             </article>
           </div>
@@ -216,10 +216,12 @@
           <h2 class="contacts-heading">Contacts us</h2>
 
           <div class="container-contacts">
-            <div class="contacts-img"><img src="./assets/contact_woman-1.png" alt="contact women"></div>
+            <div class="contacts-img">
+              <img src="./assets/contact_woman-1.png" alt="contact women">
+            </div>
             <!--Блок с кнопкой accordion -->
-            <div class="accordion-container">
-              <button class="accordion">
+            <div class="accordion-container accordion-container-city">
+              <button class="accordion accordion-city">
                   <span>City</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <circle cx="8" cy="8" r="8" fill="#AEA1A1"/>
@@ -227,12 +229,12 @@
                     <path d="M8 9L10 7" stroke="white" stroke-width="0.5" stroke-linecap="round"/>
                   </svg>
               </button>
-              <div class="accordion-wrapper">
+              <div class="accordion-wrapper accordion-wrapper-city">
                 <ul>
-                  <li>Canandaigua, NY<hr></li>
-                  <li>New York City<hr></li>
-                  <li>Yonkers, NY<hr></li>
-                  <li>Sherrill, NY<hr></li>
+                  <li>Canandaigua, NY<hr class="wrapper-line-city"></li>
+                  <li>New York City<hr class="wrapper-line-city"></li>
+                  <li>Yonkers, NY<hr class="wrapper-line-city"></li>
+                  <li>Sherrill, NY<hr class="wrapper-line-city"></li>
                 </ul>
               </div>
             </div>
