@@ -21,7 +21,8 @@ function selectCity(li) {
       valuesCity[0].innerHTML = cityInfo[i].City;
       valuesCity[1].innerHTML = cityInfo[i].Phone;
       valuesCity[2].innerHTML = cityInfo[i]["Office adress"];
-      buttonAcc.parentElement.parentElement.style.transform = "translateY(-39px)";
+      //buttonAcc.parentElement.parentElement.style.transform = "translateY(-39px)";
+      buttonAcc.parentElement.parentElement.classList.add('translated');
       formCity.classList.add('active');
       wrapperCity.classList.remove('active-wrapper');
       buttonAcc.classList.remove('active-accordion')

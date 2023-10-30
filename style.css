@@ -865,6 +865,9 @@ h3 .prices-main-word {
     padding-top: 40px;
     height: 739px;
   }
+  .contacts-content.translated {
+    transform: translateY(-39px);
+  }
   .contacts-heading {
     margin-bottom: 100px;
   }
