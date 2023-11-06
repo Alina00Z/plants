@@ -901,6 +901,7 @@ h3 .prices-main-word {
   transition: all 0.5s ease;
 }
 .bar4 {
+  transform-origin: 0px 25px;
   transition: all 0.5s ease;
 }
 .change .bar1 {
